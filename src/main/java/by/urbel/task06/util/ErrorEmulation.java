@@ -8,6 +8,9 @@ public class ErrorEmulation {
     private final Randomizer randomizer;
     private final String locale;
 
+    private static final String DATA_DIR="/data/";
+    private static final String ABC_FILE="/ABC.txt";
+
     public ErrorEmulation(long seed, String locale) {
         this.randomizer = new Randomizer(seed);
         this.locale = locale;
@@ -57,7 +60,7 @@ public class ErrorEmulation {
     }
 
     private String insertRandomChar(String value, String locale) {
-        String characters = Parser.parseFile("classpath:data/" + locale + "/ABC.txt");
+        String characters = Parser.parseFile(DATA_DIR + locale + ABC_FILE);
         char character = characters.charAt(randomizer.getRandomInt(0, characters.length()));
         int position = randomizer.getRandomInt(0, value.length());
         String firstPart = value.substring(0, position);
