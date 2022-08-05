@@ -15,7 +15,7 @@ public class Generator {
 
     private static final Map<String, String> countryNames =
             Map.of("ru_RU", "РФ", "pl_PL", "RP", "en_US", "USA");
-    private static final String DATA_DIR = "classpath:data/";
+    private static final String DATA_DIR = "/data/";
     private static final String FIRST_NAMES_FILE = "/firstNames.csv";
     private static final String LAST_NAMES_FILE = "/lastNames.csv";
     private static final String MIDDLE_NAMES_FILE = "/middleNames.csv";
